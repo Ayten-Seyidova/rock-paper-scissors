@@ -1,0 +1,6 @@
+/* General */
+@import url('reset.css');
+
+/* Pages */
+@import url('./pages/home.css');
+
