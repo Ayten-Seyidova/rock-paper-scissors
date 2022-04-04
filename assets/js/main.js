@@ -15,6 +15,8 @@ var winInfoPanel2 = document.querySelector('#winGame2');
 var rpsName1 = document.querySelector('#rpsName1');
 var rpsName2 = document.querySelector('#rpsName2');
 var winInfo = document.querySelectorAll('.win');
+var roundScore1 = 0;
+var roundScore2 = 0;
 
 var keyNames = {
     r: "Rock",
@@ -88,8 +90,9 @@ function startGame(e) {
             player2Score = 0;
             player1ScorePanel.innerHTML = 'Score: 0';
             player2ScorePanel.innerHTML = 'Score: 0';
-            winInfoPanel1.style.visibility = "hidden";
-            winInfoPanel2.style.visibility = "hidden";
+            roundScore1++
+            winInfoPanel1.innerHTML = `General score: ${roundScore1}`;
+            winInfoPanel2.innerHTML = `General score: ${roundScore2}`;
         }, 100)
 
     } else if (player2Score === 5) {
@@ -99,8 +102,9 @@ function startGame(e) {
             player2Score = 0;
             player1ScorePanel.innerHTML = 'Score: 0';
             player2ScorePanel.innerHTML = 'Score: 0';
-            winInfoPanel1.style.visibility = "hidden";
-            winInfoPanel2.style.visibility = "hidden";
+            roundScore2++
+            winInfoPanel1.innerHTML = `General score: ${roundScore1}`;
+            winInfoPanel2.innerHTML = `General score: ${roundScore2}`;
         }, 100)
 
     }
